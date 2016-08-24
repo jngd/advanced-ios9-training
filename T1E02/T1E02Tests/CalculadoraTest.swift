@@ -60,8 +60,16 @@ class CalculadoraTest: XCTestCase {
 		self.calculadora.operator1 = 5
 		self.calculadora.operator2 = 5
 		self.calculadora.operation = "/"
-		XCTAssertEqual(self.calculadora.makeOperation(), 1, "Error")
-
+		XCTAssertEqual(self.calculadora.makeOperation(),
+		               1, "Error")
 	}
 	
+	func testDivideByZero() {
+		// Calculadora is returning zero if second operator is zero
+		self.calculadora.operator1 = 5
+		self.calculadora.operator2 = 0
+		self.calculadora.operation = "/"
+		XCTAssertEqual(self.calculadora.makeOperation(),
+		               0, "Error")
+	}
 }
