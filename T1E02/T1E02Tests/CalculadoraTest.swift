@@ -32,12 +32,36 @@ class CalculadoraTest: XCTestCase {
 		}
 	}
 	
-	func testAdd(){
+	func testAdd() {
 		self.calculadora.operator1 = 5
 		self.calculadora.operator2 = 5
 		self.calculadora.operation = "+"
 		XCTAssertEqual(self.calculadora.makeOperation(),
-		               10,"Error")
+		               10, "Error")
  }
+	
+	func testSubstract() {
+		self.calculadora.operator1 = 5
+		self.calculadora.operator2 = 5
+		self.calculadora.operation = "-"
+		XCTAssertEqual(self.calculadora.makeOperation(),
+		               0, "Error")
+	}
+	
+	func testMultiply() {
+		self.calculadora.operator1 = 5
+		self.calculadora.operator2 = 5
+		self.calculadora.operation = "*"
+		XCTAssertEqual(self.calculadora.makeOperation(),
+		               25, "Error")
+	}
+	
+	func testDivide() {
+		self.calculadora.operator1 = 5
+		self.calculadora.operator2 = 5
+		self.calculadora.operation = "/"
+		XCTAssertEqual(self.calculadora.makeOperation(), 1, "Error")
+
+	}
 	
 }
