@@ -17,7 +17,7 @@ class ViewController: UIViewController {
 		
 		var vector : [Int] = []
 		
-		for _ in 1...10 {
+		for _ in 0...10 {
 			vector.append(Int(arc4random_uniform(1000)))
 		}
 		
