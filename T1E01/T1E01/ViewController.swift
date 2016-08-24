@@ -32,10 +32,7 @@ class ViewController: UIViewController {
 	}
 
 	func addVectorElements(vector: [Int]) -> Int {
-	
-		let result = vector.reduce(0, combine: +)
-		
-		return result
+		return vector.reduce(0, combine: +)
 	}
 
 }
