@@ -15,7 +15,15 @@ class ViewController: UIViewController {
 		
 		print("Juan Garcia")
 		
+		var vector : [Int] = []
 		
+		for _ in 1...10 {
+			vector.append(Int(arc4random_uniform(1000)))
+		}
+		
+		let result = addVectorElements(vector)
+		
+		print(result)
 	}
 
 	override func didReceiveMemoryWarning() {
