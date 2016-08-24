@@ -23,6 +23,12 @@ class ViewController: UIViewController {
 		// Dispose of any resources that can be recreated.
 	}
 
+	func addVectorElements(vector: [Int]) -> Int {
+	
+		let result = vector.reduce(0, combine: +)
+		
+		return result
+	}
 
 }
 
