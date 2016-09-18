@@ -14,6 +14,10 @@ class SecondViewController: UIViewController {
 	
 	@IBOutlet weak var label : UILabel!
 	
+	@IBAction func goBack(_ sender: AnyObject) {
+		
+		self.dismiss(animated: false, completion: nil)
+	}
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
