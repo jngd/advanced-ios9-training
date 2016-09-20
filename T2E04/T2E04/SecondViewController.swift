@@ -22,8 +22,8 @@ UIViewControllerTransitioningDelegate {
 		super.didReceiveMemoryWarning()
 	}
 	
-	func prepareForSegue(segue: UIStoryboardSegue, sender:
-		AnyObject?) {
+	override func prepare(for segue: UIStoryboardSegue, sender:
+		Any?) {
 		if (segue.identifier == "showCrossfadeTransition"){
 			let toVC : UIViewController = segue.destination
 				as UIViewController

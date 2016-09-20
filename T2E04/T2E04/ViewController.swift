@@ -22,8 +22,8 @@ UIViewControllerTransitioningDelegate {
 		super.didReceiveMemoryWarning()
 	}
 	
-	func prepareForSegue(segue: UIStoryboardSegue, sender:
-		AnyObject?) {
+	override func prepare(for segue: UIStoryboardSegue, sender:
+		Any?) {
 		if (segue.identifier == "showCustomTransition"){
 			let toVC : UIViewController = segue.destination
 				as UIViewController
@@ -31,10 +31,7 @@ UIViewControllerTransitioningDelegate {
 		}
 	}
 	
-	func animationController(forPresented presented: UIViewController,
-	                         presenting: UIViewController,
-	                         source: UIViewController) ->
-		UIViewControllerAnimatedTransitioning? {
+	func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
 		return self.bounce
 	}
 }
