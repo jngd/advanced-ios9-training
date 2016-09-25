@@ -13,11 +13,12 @@ class Videogame: SKScene, SKPhysicsContactDelegate {
 	
 	let score = SKLabelNode(fontNamed:"Chalkduster")
 	
-	var target:SKSpriteNode!
+	var target : SKSpriteNode!
 	var points = 0
-	var value:Float = 0.0
+	var value : Float = 0.0
+	var player : SKSpriteNode = SKSpriteNode(color: UIColor.redColor(), size: CGSizeMake(100, 50))
 	
-	enum ColliderType: UInt32 {
+	enum ColliderType : UInt32 {
 		case Player = 0
 		case Target = 1
 	}
@@ -27,7 +28,6 @@ class Videogame: SKScene, SKPhysicsContactDelegate {
 		let size2 = CGRectMake(0.0, 0.0, self.frame.size.width, self.frame.size.height)
 		self.physicsBody = SKPhysicsBody(edgeLoopFromRect:size2)
 		
-		let player = SKSpriteNode(color: UIColor.redColor(), size: CGSizeMake(100, 50))
 		player.physicsBody = SKPhysicsBody(rectangleOfSize: CGSizeMake(100, 50))
 		player.position = CGPoint(x:CGRectGetMidX(self.frame),
 		                          y:CGRectGetMidY(self.frame))
@@ -54,10 +54,10 @@ class Videogame: SKScene, SKPhysicsContactDelegate {
 		target.runAction(constMovement)
 		
 		let slider = UISlider(frame: CGRectMake(0, 0, 325, 100))
-		slider.addTarget(self, action: "manageSlider:", forControlEvents:
+		slider.addTarget(self, action: #selector(Videogame.manageSlider(_:)), forControlEvents:
 			UIControlEvents.ValueChanged)
-		slider.minimumValue = -50
-		slider.maximumValue = 50
+		slider.minimumValue = 0
+		slider.maximumValue = Float(self.frame.size.width)
 		view.addSubview(slider)
 		
 		score.text = "Score: \(points)"
@@ -99,5 +99,11 @@ class Videogame: SKScene, SKPhysicsContactDelegate {
 			let secuence = SKAction.sequence([delay, generate])
 			self.runAction(secuence)
 		}
+	}
+	
+	func manageSlider(sender: UISlider) {
+		print(sender.value)
+		player.position = CGPoint(x:CGFloat(sender.value + 50),
+		                          y:CGRectGetMidY(self.frame))
 	}
 }
