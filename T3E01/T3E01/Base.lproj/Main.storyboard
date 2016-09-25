@@ -168,7 +168,7 @@
                                 <frame key="frameInset" minX="67" minY="170" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="krakow.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="3P9-hN-mbA">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="º" translatesAutoresizingMaskIntoConstraints="NO" id="3P9-hN-mbA">
                                 <frame key="frameInset" minX="67" minY="306" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -195,7 +195,7 @@
         <image name="amager_aquare_ty_stange.jpg" width="583" height="328"/>
         <image name="berlin.jpg" width="1280" height="600"/>
         <image name="dublin-resized.jpg" width="940" height="440"/>
-        <image name="krakow.jpg" width="350" height="185"/>
         <image name="stockholmpanorama.jpg" width="600" height="400"/>
+        <image name="º" width="16" height="16"/>
     </resources>
 </document>
