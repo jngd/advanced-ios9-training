@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="10032"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="T3E04_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <slider width="1" alignment="left" value="1" maximum="3" steps="3" id="mac-9W-X2j"/>
+                        <picker height="59" alignment="left" id="Q6z-Ml-egh"/>
+                        <button width="1" alignment="left" title="Button" id="bgY-JI-cfy">
+                            <connections>
+                                <action selector="buttonAction" destination="AgC-eL-Hgc" id="uDZ-SR-ubT"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="buttonAction" destination="bgY-JI-cfy" id="YBL-f6-i7e"/>
+                        <outlet property="pickerOutlet" destination="Q6z-Ml-egh" id="5px-ec-aMe"/>
+                        <outlet property="sliderOutlet" destination="mac-9W-X2j" id="cCL-l3-0iF"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="305" y="421"/>
+        </scene>
+    </scenes>
+</document>
