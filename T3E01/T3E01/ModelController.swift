@@ -28,7 +28,7 @@ class ModelController: NSObject, UIPageViewControllerDataSource {
 		
 		let dateFormatter = DateFormatter()
 		pageData = dateFormatter.monthSymbols
-		pageData = ["one", "two", "three"]
+		pageData = ["one", "two", "three", "four"]
 	}
 	
 	func viewControllerAtIndex(_ index: Int, storyboard: UIStoryboard) -> DataViewController? {
