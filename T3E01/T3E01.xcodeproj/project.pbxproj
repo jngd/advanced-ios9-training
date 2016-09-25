@@ -14,6 +14,14 @@
 		318647621D97DB7E0074F5DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 318647601D97DB7E0074F5DC /* Main.storyboard */; };
 		318647641D97DB7E0074F5DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 318647631D97DB7E0074F5DC /* Assets.xcassets */; };
 		318647671D97DB7E0074F5DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 318647651D97DB7E0074F5DC /* LaunchScreen.storyboard */; };
+		318647751D97EA350074F5DC /* 108367.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3186476F1D97EA350074F5DC /* 108367.jpg */; };
+		318647761D97EA350074F5DC /* amager_aquare_ty_stange.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 318647701D97EA350074F5DC /* amager_aquare_ty_stange.jpg */; };
+		318647771D97EA350074F5DC /* Amsterdam.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 318647711D97EA350074F5DC /* Amsterdam.jpg */; };
+		318647781D97EA350074F5DC /* berlin.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 318647721D97EA350074F5DC /* berlin.jpg */; };
+		318647791D97EA350074F5DC /* dublin-resized.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 318647731D97EA350074F5DC /* dublin-resized.jpg */; };
+		3186477A1D97EA350074F5DC /* London_tcm233-2438088.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 318647741D97EA350074F5DC /* London_tcm233-2438088.jpg */; };
+		3186477D1D97EAC20074F5DC /* krakow.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3186477B1D97EAC20074F5DC /* krakow.jpg */; };
+		3186477E1D97EAC20074F5DC /* stockholmpanorama.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3186477C1D97EAC20074F5DC /* stockholmpanorama.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +34,14 @@
 		318647631D97DB7E0074F5DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		318647661D97DB7E0074F5DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		318647681D97DB7E0074F5DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3186476F1D97EA350074F5DC /* 108367.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 108367.jpg; path = T3E01/res/108367.jpg; sourceTree = "<group>"; };
+		318647701D97EA350074F5DC /* amager_aquare_ty_stange.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = amager_aquare_ty_stange.jpg; path = T3E01/res/amager_aquare_ty_stange.jpg; sourceTree = "<group>"; };
+		318647711D97EA350074F5DC /* Amsterdam.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Amsterdam.jpg; path = T3E01/res/Amsterdam.jpg; sourceTree = "<group>"; };
+		318647721D97EA350074F5DC /* berlin.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = berlin.jpg; path = T3E01/res/berlin.jpg; sourceTree = "<group>"; };
+		318647731D97EA350074F5DC /* dublin-resized.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "dublin-resized.jpg"; path = "T3E01/res/dublin-resized.jpg"; sourceTree = "<group>"; };
+		318647741D97EA350074F5DC /* London_tcm233-2438088.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "London_tcm233-2438088.jpg"; path = "T3E01/res/London_tcm233-2438088.jpg"; sourceTree = "<group>"; };
+		3186477B1D97EAC20074F5DC /* krakow.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = krakow.jpg; path = T3E01/res/krakow.jpg; sourceTree = "<group>"; };
+		3186477C1D97EAC20074F5DC /* stockholmpanorama.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = stockholmpanorama.jpg; path = T3E01/res/stockholmpanorama.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +58,7 @@
 		3186474C1D97DB7E0074F5DC = {
 			isa = PBXGroup;
 			children = (
+				3186476E1D97E9410074F5DC /* res */,
 				318647571D97DB7E0074F5DC /* T3E01 */,
 				318647561D97DB7E0074F5DC /* Products */,
 			);
@@ -68,6 +85,21 @@
 				318647681D97DB7E0074F5DC /* Info.plist */,
 			);
 			path = T3E01;
+			sourceTree = "<group>";
+		};
+		3186476E1D97E9410074F5DC /* res */ = {
+			isa = PBXGroup;
+			children = (
+				3186477B1D97EAC20074F5DC /* krakow.jpg */,
+				3186477C1D97EAC20074F5DC /* stockholmpanorama.jpg */,
+				3186476F1D97EA350074F5DC /* 108367.jpg */,
+				318647701D97EA350074F5DC /* amager_aquare_ty_stange.jpg */,
+				318647711D97EA350074F5DC /* Amsterdam.jpg */,
+				318647721D97EA350074F5DC /* berlin.jpg */,
+				318647731D97EA350074F5DC /* dublin-resized.jpg */,
+				318647741D97EA350074F5DC /* London_tcm233-2438088.jpg */,
+			);
+			name = res;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -129,9 +161,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3186477E1D97EAC20074F5DC /* stockholmpanorama.jpg in Resources */,
 				318647671D97DB7E0074F5DC /* LaunchScreen.storyboard in Resources */,
 				318647641D97DB7E0074F5DC /* Assets.xcassets in Resources */,
+				318647791D97EA350074F5DC /* dublin-resized.jpg in Resources */,
+				318647781D97EA350074F5DC /* berlin.jpg in Resources */,
+				318647771D97EA350074F5DC /* Amsterdam.jpg in Resources */,
+				318647761D97EA350074F5DC /* amager_aquare_ty_stange.jpg in Resources */,
+				318647751D97EA350074F5DC /* 108367.jpg in Resources */,
 				318647621D97DB7E0074F5DC /* Main.storyboard in Resources */,
+				3186477A1D97EA350074F5DC /* London_tcm233-2438088.jpg in Resources */,
+				3186477D1D97EAC20074F5DC /* krakow.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,6 +347,7 @@
 				3186476D1D97DB7E0074F5DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
