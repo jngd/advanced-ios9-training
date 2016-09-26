@@ -9,39 +9,41 @@
 import UIKit
 
 class ViewController: UIViewController,
-UIPopoverPresentationControllerDelegate{
+	UIPopoverPresentationControllerDelegate,
+UITableViewDelegate, UITableViewDataSource {
+	
+	let helpOptions : [String] = ["Option1", "Option2", "Option3"]
+	
+	var tableView : UITableView = UITableView()
 	
 	@IBOutlet weak var helpMe: UIButton!
 	
 	@IBAction func buttonHelpMe(sender: AnyObject) {
-
-		let popoverContent : UIViewController = UIViewController()
-
-		popoverContent.view.backgroundColor = UIColor.redColor()
-		popoverContent.modalPresentationStyle =
+		
+		let contenidoPopover : UIViewController = UIViewController ()
+		contenidoPopover.modalPresentationStyle =
 			UIModalPresentationStyle.Popover
 		
-		let label = UILabel(frame: CGRectMake(0, 150, 300, 50))
+		tableView = UITableView(frame: UIScreen.mainScreen().bounds, style: UITableViewStyle.Plain)
+		tableView.delegate = self
+		tableView.dataSource = self
+		tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
+		contenidoPopover.view.addSubview(self.tableView)
 		
-		label.text = "¡Hola Popover!"
-		label.textAlignment = NSTextAlignment.Center
-		popoverContent.view.addSubview(label)
-		
-		let popover = popoverContent.popoverPresentationController as
+		let popover = contenidoPopover.popoverPresentationController as
 			UIPopoverPresentationController?
-		
-		popoverContent.preferredContentSize = CGSizeMake(300, 300)
+		contenidoPopover.preferredContentSize = CGSizeMake(300, 300)
 		popover?.delegate = self
 		popover?.sourceView = sender as! UIButton
 		popover?.permittedArrowDirections = UIPopoverArrowDirection.Up
 		popover?.sourceRect = CGRectMake(10, 20, 0, 0)
-		self.presentViewController(popoverContent, animated: true,
+		
+		self.presentViewController(contenidoPopover, animated: true,
 		                           completion: nil)
 	}
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		// Do any additional setup after loading the view, typically from a nib.
 	}
 	
 	override func didReceiveMemoryWarning() {
@@ -49,6 +51,17 @@ UIPopoverPresentationControllerDelegate{
 		// Dispose of any resources that can be recreated.
 	}
 	
+	func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+		return self.helpOptions.count;
+	}
+	
+	func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath)
+		-> UITableViewCell {
+		
+		let cell:UITableViewCell=UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "cell")
+		cell.textLabel!.text = helpOptions[indexPath.row]
+		return cell;
+	}
 	
 }
 
