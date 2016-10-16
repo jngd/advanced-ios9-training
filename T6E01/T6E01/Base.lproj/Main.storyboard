@@ -41,6 +41,27 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cph.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Kcx-S3-M59">
                                 <rect key="frame" x="24" y="28" width="273" height="292"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dhB-Dt-spQ">
+                                <rect key="frame" x="20" y="431" width="82" height="30"/>
+                                <state key="normal" title="Monocrome"/>
+                                <connections>
+                                    <action selector="setMonocromeFilter:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bZ1-ug-jQb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nze-D9-fOF">
+                                <rect key="frame" x="263" y="431" width="30" height="30"/>
+                                <state key="normal" title="Noir"/>
+                                <connections>
+                                    <action selector="setPhotoEffectNoirFilter:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RlM-2l-Ui4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rnl-eq-fG2">
+                                <rect key="frame" x="133" y="518" width="53" height="30"/>
+                                <state key="normal" title="Restore"/>
+                                <connections>
+                                    <action selector="restoreDefaultPhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JfI-0i-s4g"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
