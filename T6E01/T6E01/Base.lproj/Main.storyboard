@@ -62,11 +62,15 @@
                                     <action selector="restoreDefaultPhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JfI-0i-s4g"/>
                                 </connections>
                             </button>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Uts-ny-E6h">
+                                <rect key="frame" x="22" y="340" width="277" height="31"/>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="imageView" destination="Kcx-S3-M59" id="emh-kC-XFa"/>
+                        <outlet property="slider" destination="Uts-ny-E6h" id="l0x-l3-W1u"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

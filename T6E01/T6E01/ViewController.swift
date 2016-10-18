@@ -16,6 +16,7 @@ class ViewController: UIViewController {
 	
 	/***** Outlets *****/
 	@IBOutlet weak var imageView: UIImageView!
+	@IBOutlet weak var slider: UISlider!
 	
 	/***** Actions *****/
 	@IBAction func setSepiaFilter(sender: AnyObject) {
@@ -35,9 +36,10 @@ class ViewController: UIViewController {
 
 		// Load filter
 		let vignetteFilter : CIFilter = CIFilter(name: "CIVignette")!
+		// Example of input set with slider value
 		vignetteFilter.setValue(inputImage, forKey: kCIInputImageKey)
-		vignetteFilter.setValue(0.8, forKey: "inputIntensity")
-		vignetteFilter.setValue(80, forKey: "inputRadius")
+		vignetteFilter.setValue(slider.value, forKey: "inputIntensity")
+		vignetteFilter.setValue(slider.value * 100, forKey: "inputRadius")
 		inputImage = vignetteFilter.valueForKey(kCIOutputImageKey) as! CIImage
 		
 		// Set in imageView
