@@ -20,6 +20,10 @@ class ViewController: UIViewController {
 	@IBOutlet weak var secondsLabel: UILabel!
 	
 	/***** Actions *****/
+	@IBAction func sliderValueChanged(sender: AnyObject) {
+		player.volume = sender.value
+	}
+	
 	@IBAction func playButton(sender: AnyObject) {
 		
 		if (player.status != AVPlayerStatus.ReadyToPlay) {
