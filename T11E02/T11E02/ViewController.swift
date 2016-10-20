@@ -46,10 +46,19 @@ class ViewController: UIViewController {
 		
 		let moviePath = NSURL(string: "http://www.imaginaformacion.com/recursos/videos/trailerjobs.mp4")
 		
+		secondsLabel.text = "sec"
 		player = AVPlayer(URL: moviePath!)
 		playerLayer = AVPlayerLayer(player: player)
 		
 		playerLayer.frame = CGRectMake(10, 10, 300, 225)
+		player.addPeriodicTimeObserverForInterval(CMTime(seconds: 1.0,
+			preferredTimescale: 1), queue: nil) { (time) -> Void in
+				let valor = time.value as Int64
+				let timestamp = time.timescale as Int32
+				let res = Int(valor) / Int(timestamp)
+				self.secondsLabel.text = res.description
+		}
+
 		self.view.layer.addSublayer(playerLayer)
 		player.play()
 	}
