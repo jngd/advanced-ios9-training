@@ -20,64 +20,25 @@ NSXMLParserDelegate, UITableViewDelegate {
 		
 		apps = [AppInfo]()
 		
-		let config = NSURLSessionConfiguration.defaultSessionConfiguration()
-		config.allowsCellularAccess = true
-		
-		let session = NSURLSession(configuration: config)
-		session.downloadTaskWithURL(NSURL(
-			string: "https://itunes.apple.com/es/rss/topfreeapplications/limit=50/json")!) {
-				(url, response, error) -> Void in
-				
-				print(url)
-				
-				let dataTopApps = NSData(contentsOfURL: url!)
-				var dicTopApps : NSDictionary!
-				
-				do {
-					dicTopApps = try NSJSONSerialization.JSONObjectWithData(
-						dataTopApps!,
-						options: NSJSONReadingOptions.MutableLeaves) as! NSDictionary
-					
-					let applications = (dicTopApps["feed"] as! NSDictionary) ["entry"] as!
-						[NSDictionary]
-					print(applications)
-					
-					for app in applications {
-						let appTemp = AppInfo()
-						appTemp.name = (app["im:name"] as! NSDictionary) ["label"] as! String
-						appTemp.index = self.apps.count
-						appTemp.urlApp = ((app["link"] as! NSDictionary)["attributes"] as!
-							NSDictionary)["href"] as! String
-						appTemp.urlImage = (((app["im:image"]
-							as! NSArray)[2] as! NSDictionary)["label"] as! String)
-						self.apps.append(appTemp)
-					}
-					
-					dispatch_async(dispatch_get_main_queue(), {() -> Void in
-						self.table.reloadData()
-					})
-					
-					// Do that into NSOperation
-					self.getImages()
-				} catch {
-					print("Parse failed")
-				}
-			}.resume()
+		getData();
 	}
 	
 	override func didReceiveMemoryWarning() {
 		super.didReceiveMemoryWarning()
 	}
 	
-	func getImages() {
+	func getData() {
 		let queue = NSOperationQueue()
 		
-		for it in apps {
-			let imagesOperation = ImagesOperation()
-			imagesOperation.app = it as AppInfo
-			imagesOperation.delegate = self
-			queue.addOperation(imagesOperation)
+		queue.maxConcurrentOperationCount = 1
+		
+		let dataOperation = DataOperation()
+		dataOperation.apps = self.apps
+		dataOperation.delegate = self
+		dataOperation.completionBlock = {
+			
 		}
+		queue.addOperation(dataOperation)
 	}
 }
 
@@ -111,9 +72,32 @@ extension ViewController: ImagesOperationDelegate {
 		let cell = table.cellForRowAtIndexPath(indexPath)
 		
 		dispatch_async(dispatch_get_main_queue(), {() -> Void in
-		cell?.imageView!.image = appData.image
-		self.table.reloadRowsAtIndexPaths([indexPath], withRowAnimation: .None)})
+			cell?.imageView!.image = appData.image
+			self.table.reloadRowsAtIndexPaths([indexPath], withRowAnimation: .None)
+			}
+		)
 	}
 }
 
+// MARK: - ImagesOperationDelegate
+extension ViewController: DataOperationDelegate {
+	
+	func dataOperation(dataOperations: DataOperation, appData: [AppInfo]) {
+		self.apps = appData
+		
+		// TODO : Is this safe?
+		let queue = NSOperationQueue()
+		
+		for it in apps {
+			let imagesOperation = ImagesOperation()
+			imagesOperation.app = it as AppInfo
+			imagesOperation.delegate = self
+			queue.addOperation(imagesOperation)
+		}
+		
+		dispatch_async(dispatch_get_main_queue(), {() -> Void in
+			self.table.reloadData()
+		})
+	}
+}
 // :]
