@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3111D7FA1DCE4BDA009739F1 /* EventThisWeekController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3111D7F91DCE4BDA009739F1 /* EventThisWeekController.swift */; };
 		317E6B681DCDD78400119706 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317E6B671DCDD78400119706 /* AppDelegate.swift */; };
 		317E6B6A1DCDD78400119706 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317E6B691DCDD78400119706 /* ViewController.swift */; };
 		317E6B6D1DCDD78400119706 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 317E6B6B1DCDD78400119706 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3111D7F91DCE4BDA009739F1 /* EventThisWeekController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventThisWeekController.swift; sourceTree = "<group>"; };
 		317E6B641DCDD78400119706 /* T17E01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = T17E01.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		317E6B671DCDD78400119706 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		317E6B691DCDD78400119706 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -55,6 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				317E6B671DCDD78400119706 /* AppDelegate.swift */,
+				3111D7F91DCE4BDA009739F1 /* EventThisWeekController.swift */,
 				317E6B691DCDD78400119706 /* ViewController.swift */,
 				317E6B6B1DCDD78400119706 /* Main.storyboard */,
 				317E6B6E1DCDD78400119706 /* Assets.xcassets */,
@@ -137,6 +140,7 @@
 			files = (
 				317E6B6A1DCDD78400119706 /* ViewController.swift in Sources */,
 				317E6B681DCDD78400119706 /* AppDelegate.swift in Sources */,
+				3111D7FA1DCE4BDA009739F1 /* EventThisWeekController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +290,7 @@
 				317E6B781DCDD78400119706 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
