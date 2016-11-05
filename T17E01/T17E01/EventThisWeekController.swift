@@ -55,7 +55,6 @@ class EventThisWeekController: UITableViewController {
 	}
 
 	override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-		print("cellForRowAtIndexPath")
 		let cell = UITableViewCell(style: .Default, reuseIdentifier: nil)
 		
 		cell.textLabel?.text = self.eventsThisWeek[indexPath.row].title
@@ -64,7 +63,6 @@ class EventThisWeekController: UITableViewController {
 	}
 	
 	override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		print("numberOfRowsInSection")
 		return eventsThisWeek.count
 	}
 }
