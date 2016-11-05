@@ -30,6 +30,7 @@ class ViewController: UIViewController {
 	@IBOutlet weak var datePicker: UIDatePicker!
 	@IBOutlet weak var eventTextField: UITextField!
 	@IBOutlet weak var titleTextField: UITextField!
+	@IBOutlet weak var recurrencySwitch: UISwitch!
 	
 	/***** Vars *****/
 	var eventStore: EKEventStore!
@@ -48,10 +49,17 @@ class ViewController: UIViewController {
 			guard calendar != nil else { fatalError("Calendar not valid") }
 			
 			let event = EKEvent(eventStore: self.eventStore)
+			
 			event.title = self.eventTextField.text!
 			event.startDate = self.datePicker.date
 			event.endDate =
 				self.datePicker.date.dateByAddingTimeInterval(60*60)
+			
+			if self.recurrencySwitch.on {
+				event.addRecurrenceRule(EKRecurrenceRule(recurrenceWithFrequency: .Weekly,
+					interval: 1, end: nil))
+			}
+			
 			event.calendar = calendar!
 			
 			do{

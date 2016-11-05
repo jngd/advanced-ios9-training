@@ -23,7 +23,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Z5e-dd-4zG">
-                                <rect key="frame" x="20" y="149" width="280" height="216"/>
+                                <rect key="frame" x="20" y="130" width="280" height="216"/>
                                 <date key="date" timeIntervalSinceReferenceDate="500029513.42262399">
                                     <!--2016-11-05 09:05:13 +0000-->
                                 </date>
@@ -52,6 +52,15 @@
                                     <action selector="saveEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="32V-yh-8VV"/>
                                 </connections>
                             </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BXh-K6-2tL">
+                                <rect key="frame" x="20" y="366" width="51" height="31"/>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Repeat every week" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LSh-8d-eLK">
+                                <rect key="frame" x="88" y="371" width="145" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -59,6 +68,7 @@
                         <outlet property="calendarNameTextField" destination="vmH-l7-hps" id="qBs-ac-A92"/>
                         <outlet property="datePicker" destination="Z5e-dd-4zG" id="CaJ-Og-Qd2"/>
                         <outlet property="eventTextField" destination="5eq-JY-ZWZ" id="Q2W-pY-FxK"/>
+                        <outlet property="recurrencySwitch" destination="BXh-K6-2tL" id="Dvd-1y-6tM"/>
                         <outlet property="titleTextField" destination="qT4-cm-xj9" id="G2O-fv-UsL"/>
                     </connections>
                 </viewController>
