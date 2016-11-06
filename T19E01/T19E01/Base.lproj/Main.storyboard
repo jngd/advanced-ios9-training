@@ -44,7 +44,7 @@
         <!--Create-->
         <scene sceneID="fue-Dl-fY6">
             <objects>
-                <viewController id="Wjj-jY-pjQ" sceneMemberID="viewController">
+                <viewController id="Wjj-jY-pjQ" customClass="CreateFileViewController" customModule="T19E01" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Bsf-hF-O0N"/>
                         <viewControllerLayoutGuide type="bottom" id="zcF-kY-D25"/>
@@ -56,10 +56,16 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MjY-Bp-Zdg">
                                 <rect key="frame" x="116" y="197" width="88" height="30"/>
                                 <state key="normal" title="Generate file"/>
+                                <connections>
+                                    <action selector="generateFile:" destination="Wjj-jY-pjQ" eventType="touchUpInside" id="Ddz-IM-n84"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="59s-PT-lsT">
                                 <rect key="frame" x="118" y="455" width="86" height="30"/>
                                 <state key="normal" title="Generate dir"/>
+                                <connections>
+                                    <action selector="generateDirectory:" destination="Wjj-jY-pjQ" eventType="touchUpInside" id="Ped-3N-AzD"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Dir" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uaa-rx-wrJ">
                                 <rect key="frame" x="20" y="397" width="280" height="30"/>
@@ -80,6 +86,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Create" id="KcY-yD-FDr"/>
+                    <connections>
+                        <outlet property="dirName" destination="uaa-rx-wrJ" id="PH3-Ir-2Io"/>
+                        <outlet property="fileContent" destination="BPg-9z-Vww" id="vFX-8U-BFK"/>
+                        <outlet property="fileName" destination="B1L-c3-14o" id="hhl-rd-aNh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ikF-IT-9cO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -88,23 +99,23 @@
         <!--App Content-->
         <scene sceneID="c5w-bA-fIW">
             <objects>
-                <tableViewController id="PhT-cQ-1LK" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="52" sectionHeaderHeight="28" sectionFooterHeight="28" id="LXH-LL-Voh">
+                <tableViewController id="PhT-cQ-1LK" customClass="ShowDirectoryController" customModule="T19E01" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="65" sectionHeaderHeight="28" sectionFooterHeight="28" id="LXH-LL-Voh">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="52" id="OQ7-tv-Wpb">
-                                <rect key="frame" x="0.0" y="28" width="320" height="52"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="FileExplorerCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomCell" rowHeight="100" id="OQ7-tv-Wpb" customClass="FileExplorerCell" customModule="T19E01" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="320" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OQ7-tv-Wpb" id="GEw-A2-ptJ">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="51"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="99"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7EO-Bg-QN0">
                                             <rect key="frame" x="17" y="0.0" width="64" height="43"/>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="CustomCell" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5DF-Jh-itU">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5DF-Jh-itU">
                                             <rect key="frame" x="102" y="11" width="200" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -112,10 +123,14 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="elementIcon" destination="7EO-Bg-QN0" id="sl5-Rn-bhC"/>
+                                    <outlet property="name" destination="5DF-Jh-itU" id="Y3u-FT-DJS"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="PhT-cQ-1LK" id="Cy9-Q4-HGD"/>
+                            <outlet property="dataSource" destination="PhT-cQ-1LK" id="EBc-OY-OaY"/>
                             <outlet property="delegate" destination="PhT-cQ-1LK" id="e3F-ir-HEz"/>
                         </connections>
                     </tableView>
@@ -123,7 +138,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NhQ-32-B5p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="408" y="46"/>
+            <point key="canvasLocation" x="403" y="47"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Bs4-Zl-wtY">

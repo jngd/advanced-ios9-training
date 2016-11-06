@@ -24,4 +24,68 @@ import UIKit
 
 class ShowDirectoryController: UITableViewController {
 	
+	/***** Vars *****/
+	var files = [String]()
+	var fileManager: NSFileManager!
+	var documentsPath: String!
+	var fileList = [String]()
+	
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		
+		fileManager = NSFileManager.defaultManager()
+		
+		documentsPath = (NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory,
+			NSSearchPathDomainMask.UserDomainMask, true).first! as String)
+		
+		do{
+			fileList = try fileManager.contentsOfDirectoryAtPath(documentsPath)
+		}catch{
+			print("Error getting file structure.")
+		}
+	}
+	
+	override func viewDidAppear(animated: Bool) {
+		
+		do{
+			files = try fileManager.contentsOfDirectoryAtPath(documentsPath)
+		}catch{
+			print("Error getting file structure")
+		}
+		print("Reloading data")
+		tableView.reloadData()
+	}
+	
+	override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+		return 1
+	}
+	
+	override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+		print("cellForRowAtindexpath")
+
+		let cell = tableView.dequeueReusableCellWithIdentifier("CustomCell", forIndexPath: indexPath) as! FileExplorerCell
+		let path = files[indexPath.row]
+		var isDir: ObjCBool = ObjCBool(false)
+		
+		if (!fileManager.fileExistsAtPath((documentsPath as
+			NSString).stringByAppendingPathComponent(path), isDirectory: &isDir)){
+			print("File not exists")
+			return cell;
+		}
+		
+		if (isDir.boolValue) {
+			cell.elementIcon?.image = UIImage(named: "dir.jpg")
+		} else {
+			cell.elementIcon?.image = UIImage(named: "file.png")
+		}
+		
+		cell.name.text = path
+		
+		return cell
+	}
+	
+	override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+		print("Number of row in secion \(files.count)")
+		return files.count
+	}
 }

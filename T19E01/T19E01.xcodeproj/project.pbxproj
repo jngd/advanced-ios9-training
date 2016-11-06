@@ -16,6 +16,7 @@
 		3111D81F1DCF69C1009739F1 /* CreateFileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3111D81E1DCF69C1009739F1 /* CreateFileViewController.swift */; };
 		31D6CC8B1DCF6A9D007E78B1 /* ReadFileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D6CC8A1DCF6A9D007E78B1 /* ReadFileViewController.swift */; };
 		31D6CC8D1DCF6B79007E78B1 /* ShowDirectoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D6CC8C1DCF6B79007E78B1 /* ShowDirectoryController.swift */; };
+		31D6CC8F1DCF6EE4007E78B1 /* FileExplorerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D6CC8E1DCF6EE4007E78B1 /* FileExplorerCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		3111D81E1DCF69C1009739F1 /* CreateFileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateFileViewController.swift; sourceTree = "<group>"; };
 		31D6CC8A1DCF6A9D007E78B1 /* ReadFileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReadFileViewController.swift; path = ../ReadFileViewController.swift; sourceTree = "<group>"; };
 		31D6CC8C1DCF6B79007E78B1 /* ShowDirectoryController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowDirectoryController.swift; sourceTree = "<group>"; };
+		31D6CC8E1DCF6EE4007E78B1 /* FileExplorerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileExplorerCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				3111D8071DCF23A4009739F1 /* AppDelegate.swift */,
 				3111D80B1DCF23A4009739F1 /* Main.storyboard */,
 				31D6CC8C1DCF6B79007E78B1 /* ShowDirectoryController.swift */,
+				31D6CC8E1DCF6EE4007E78B1 /* FileExplorerCell.swift */,
 				3111D80E1DCF23A4009739F1 /* Assets.xcassets */,
 				3111D8101DCF23A4009739F1 /* LaunchScreen.storyboard */,
 				3111D8131DCF23A4009739F1 /* Info.plist */,
@@ -159,6 +162,7 @@
 			files = (
 				31D6CC8B1DCF6A9D007E78B1 /* ReadFileViewController.swift in Sources */,
 				3111D81F1DCF69C1009739F1 /* CreateFileViewController.swift in Sources */,
+				31D6CC8F1DCF6EE4007E78B1 /* FileExplorerCell.swift in Sources */,
 				31D6CC8D1DCF6B79007E78B1 /* ShowDirectoryController.swift in Sources */,
 				3111D8081DCF23A4009739F1 /* AppDelegate.swift in Sources */,
 			);

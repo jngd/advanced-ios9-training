@@ -24,5 +24,42 @@ import UIKit
 
 class CreateFileViewController: UIViewController {
 	
+	/***** Vars *****/
+	var fileManager = NSFileManager.defaultManager()
+	var documentsPath = (NSSearchPathForDirectoriesInDomains(
+		NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true).first! as NSString)
+
+	/***** Outlets *****/
+	@IBOutlet weak var fileName: UITextField!
+	@IBOutlet weak var fileContent: UITextField!
+	@IBOutlet weak var dirName: UITextField!
+
+	/***** Actions *****/
+	@IBAction func generateFile(sender: AnyObject) {
+		let content = fileContent.text?.dataUsingEncoding(NSUTF8StringEncoding)
+		
+		if fileManager.createFileAtPath(documentsPath.stringByAppendingPathComponent(
+			"\(fileName.text!).txt"), contents: content, attributes: nil) {
+			print("File saved")
+		} else {
+			print("Error saving file")
+		}
+		
+	}
+	
+	@IBAction func generateDirectory(sender: AnyObject) {
+		let newDirectory = documentsPath.stringByAppendingPathComponent(dirName.text!)
+		
+		do {
+			try fileManager.createDirectoryAtPath(newDirectory,
+			                                      withIntermediateDirectories: true,
+			                                      attributes: nil)
+			
+			print("Directory created")
+		} catch {
+			print("Error creating directory")
+		}
+		
+	}
 	
 }
