@@ -24,4 +24,28 @@ import UIKit
 
 class ReadFileViewController: UIViewController {
 	
+	/***** Vars *****/
+	var fileManager = NSFileManager.defaultManager()
+	var documentsPath = (NSSearchPathForDirectoriesInDomains(
+		NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true).first! as NSString)
+	
+	/***** Outlets *****/
+	@IBOutlet weak var filecontent: UITextView!
+	@IBOutlet weak var filename: UITextField!
+	
+	/***** Actions *****/
+	@IBAction func openFile(sender: AnyObject) {
+		let path =
+			documentsPath.stringByAppendingPathComponent(filename.text!) as String
+		
+		if (!fileManager.fileExistsAtPath(path)) {
+			print("file not exists")
+			return
+		}
+		
+		let content = NSString(data: fileManager.contentsAtPath(path)!,
+		                         encoding: NSUTF8StringEncoding)
+		
+		filecontent.text = content as! String
+	}
 }

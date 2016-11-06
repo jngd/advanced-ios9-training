@@ -8,7 +8,7 @@
         <!--Read File-->
         <scene sceneID="d8A-AF-2CT">
             <objects>
-                <viewController id="3lM-84-dpA" sceneMemberID="viewController">
+                <viewController id="3lM-84-dpA" customClass="ReadFileViewController" customModule="T19E01" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0QA-Do-R5z"/>
                         <viewControllerLayoutGuide type="bottom" id="pBo-PY-97a"/>
@@ -25,6 +25,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GrT-ki-Pq0">
                                 <rect key="frame" x="141" y="142" width="38" height="30"/>
                                 <state key="normal" title="Open"/>
+                                <connections>
+                                    <action selector="openFile:" destination="3lM-84-dpA" eventType="touchUpInside" id="cTL-1U-K47"/>
+                                </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ryV-gw-FBj">
                                 <rect key="frame" x="40" y="220" width="240" height="231"/>
@@ -36,6 +39,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Read File" id="Yba-5b-7eP"/>
+                    <connections>
+                        <outlet property="filecontent" destination="ryV-gw-FBj" id="HuR-zZ-02E"/>
+                        <outlet property="filename" destination="WXm-T0-Wjg" id="UO2-jz-xuR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xrr-Q0-ZZg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
