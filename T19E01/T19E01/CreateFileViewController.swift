@@ -40,7 +40,6 @@ class CreateFileViewController: UIViewController {
 		
 		if fileManager.createFileAtPath(documentsPath.stringByAppendingPathComponent(
 			"\(fileName.text!).txt"), contents: content, attributes: nil) {
-			print("File saved")
 		} else {
 			print("Error saving file")
 		}
@@ -53,9 +52,7 @@ class CreateFileViewController: UIViewController {
 		do {
 			try fileManager.createDirectoryAtPath(newDirectory,
 			                                      withIntermediateDirectories: true,
-			                                      attributes: nil)
-			
-			print("Directory created")
+			                                      attributes: nil)			
 		} catch {
 			print("Error creating directory")
 		}

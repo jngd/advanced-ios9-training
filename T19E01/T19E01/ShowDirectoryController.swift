@@ -52,7 +52,6 @@ class ShowDirectoryController: UITableViewController {
 		}catch{
 			print("Error getting file structure")
 		}
-		print("Reloading data")
 		tableView.reloadData()
 	}
 	
@@ -61,7 +60,6 @@ class ShowDirectoryController: UITableViewController {
 	}
 	
 	override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-		print("cellForRowAtindexpath")
 
 		let cell = tableView.dequeueReusableCellWithIdentifier("CustomCell", forIndexPath: indexPath) as! FileExplorerCell
 		let path = files[indexPath.row]
@@ -85,7 +83,6 @@ class ShowDirectoryController: UITableViewController {
 	}
 	
 	override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		print("Number of row in secion \(files.count)")
 		return files.count
 	}
 }
