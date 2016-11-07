@@ -48,10 +48,11 @@ class ViewController: UIViewController {
 	func loadMovies(){
 		movies = [Movie]()
 		
-		let db_path = NSBundle.mainBundle().pathForResource("peliculas", ofType:
+		let db_path = NSBundle.mainBundle().pathForResource("db/peliculas", ofType:
 			"sqlite")
 		
-		var db = COpaquePointer()
+		var db: COpaquePointer = nil
+		
 		let status = sqlite3_open(db_path!, &db)
 		
 		if status != SQLITE_OK {
@@ -60,7 +61,7 @@ class ViewController: UIViewController {
 		}
 		
 		let query_stmt = "SELECT * FROM peliculas"
-		var statement = COpaquePointer()
+		var statement: COpaquePointer = nil
 		
 		if(sqlite3_prepare_v2(db, query_stmt, -1, &statement, nil) !=
 			SQLITE_OK){
@@ -85,7 +86,6 @@ class ViewController: UIViewController {
 		
 		sqlite3_finalize(statement)
 		
-		print("\(movies.count)")
 		self.table.reloadData()
 	}
 }
@@ -94,8 +94,12 @@ class ViewController: UIViewController {
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
 	
 	func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-		let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
-		cell.textLabel!.text = movies[indexPath.item].name
+		let cell = tableView.dequeueReusableCellWithIdentifier("MovieCell") as! MovieCell
+		
+		cell.title.text = movies[indexPath.item].name
+		cell.year.text = String(movies[indexPath.item].year)
+		cell.director.text = movies[indexPath.item].director
+		
 		return cell
 	}
 	

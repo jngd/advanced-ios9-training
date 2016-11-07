@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3191E0A51DD10D5600C71FAB /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3191E0A41DD10D5600C71FAB /* MovieCell.swift */; };
 		31F8AB871DCFDC650054057B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F8AB861DCFDC650054057B /* AppDelegate.swift */; };
 		31F8AB891DCFDC650054057B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F8AB881DCFDC650054057B /* ViewController.swift */; };
 		31F8AB8C1DCFDC650054057B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31F8AB8A1DCFDC650054057B /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3191E0A41DD10D5600C71FAB /* MovieCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
 		31F8AB831DCFDC650054057B /* T19E02.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = T19E02.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31F8AB861DCFDC650054057B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		31F8AB881DCFDC650054057B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 				31F8AB861DCFDC650054057B /* AppDelegate.swift */,
 				31F8AB881DCFDC650054057B /* ViewController.swift */,
 				31F8AB8A1DCFDC650054057B /* Main.storyboard */,
+				3191E0A41DD10D5600C71FAB /* MovieCell.swift */,
 				31F8AB8D1DCFDC650054057B /* Assets.xcassets */,
 				31F8AB8F1DCFDC650054057B /* LaunchScreen.storyboard */,
 				31F8AB9B1DCFDCD50054057B /* db */,
@@ -147,6 +150,7 @@
 			files = (
 				31F8AB891DCFDC650054057B /* ViewController.swift in Sources */,
 				31F8AB871DCFDC650054057B /* AppDelegate.swift in Sources */,
+				3191E0A51DD10D5600C71FAB /* MovieCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,6 +313,7 @@
 				31F8AB971DCFDC650054057B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
