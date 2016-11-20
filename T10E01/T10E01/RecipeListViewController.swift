@@ -21,43 +21,7 @@
 */
 
 import UIKit
-import Social
 
-class ShareViewController: SLComposeServiceViewController {
-	
-	var sizeConfigurationItem: SLComposeSheetConfigurationItem{
-		let item = SLComposeSheetConfigurationItem()
-		item.title = "Size"
-		item.value = self.selectedSize
-		item.tapHandler = self.showSizeSelection
-		return item
-	}
-	
-	override func isContentValid() -> Bool {
-		return true
-	}
-	
-	override func didSelectPost() {
-		self.extensionContext!.completeRequestReturningItems([], completionHandler: nil)
-	}
-	
-	override func configurationItems() -> [AnyObject]! {
-		return [sizeConfigurationItem]
-	}
+class RecipeListViewController: UIViewController {
 
-}
-
-extension ShareViewController: SizeTableViewControllerDelegate {
-
-	func showSizeSelection(){
-		let controller = SizeTableViewController(style: .Plain)
-		controller.selectedSize = self.sizeConfigurationItem.value
-		controller.delegate = self
-		pushConfigurationViewController(controller)
-	}
-	func sizeSelection(sender: SizeTableViewController, selectedValue: String) {
-		self.sizeConfigurationItem.value = selectedValue
-		self.selectedSize = selectedValue
-		popConfigurationViewController()
-	}
 }

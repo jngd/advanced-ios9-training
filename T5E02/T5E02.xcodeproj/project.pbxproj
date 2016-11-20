@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3144215A1DD86FA0002788AB /* SizeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314421591DD86FA0002788AB /* SizeTableViewController.swift */; };
 		314B143E1DD50BC3007E095D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314B143D1DD50BC3007E095D /* AppDelegate.swift */; };
 		314B14401DD50BC3007E095D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314B143F1DD50BC3007E095D /* ViewController.swift */; };
 		314B14431DD50BC3007E095D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 314B14411DD50BC3007E095D /* Main.storyboard */; };
@@ -42,6 +43,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		314421591DD86FA0002788AB /* SizeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SizeTableViewController.swift; sourceTree = "<group>"; };
 		314B143A1DD50BC3007E095D /* T5E02.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = T5E02.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		314B143D1DD50BC3007E095D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		314B143F1DD50BC3007E095D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 		314B14541DD50BDE007E095D /* T5E02Extension */ = {
 			isa = PBXGroup;
 			children = (
+				314421591DD86FA0002788AB /* SizeTableViewController.swift */,
 				314B14621DD50BF0007E095D /* T5E02Extension.entitlements */,
 				314B14551DD50BDE007E095D /* ShareViewController.swift */,
 				314B14571DD50BDE007E095D /* MainInterface.storyboard */,
@@ -232,6 +235,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3144215A1DD86FA0002788AB /* SizeTableViewController.swift in Sources */,
 				314B14401DD50BC3007E095D /* ViewController.swift in Sources */,
 				314B143E1DD50BC3007E095D /* AppDelegate.swift in Sources */,
 			);
@@ -435,6 +439,7 @@
 				314B144E1DD50BC3007E095D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		314B145E1DD50BDE007E095D /* Build configuration list for PBXNativeTarget "T5E02Extension" */ = {
 			isa = XCConfigurationList;
@@ -443,6 +448,7 @@
 				314B14601DD50BDE007E095D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
