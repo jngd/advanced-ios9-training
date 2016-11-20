@@ -43,6 +43,6 @@ extension RecipeListViewController: UITableViewDataSource {
 extension RecipeListViewController: UITableViewDelegate {
 
 	func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-		selectedIndexPath = indexPath
+		
 	}
 }
