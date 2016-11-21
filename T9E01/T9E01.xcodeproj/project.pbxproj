@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		312182931DE378160030C2E9 /* conejoConPatatasGratinadas.png in Resources */ = {isa = PBXBuildFile; fileRef = 3121828E1DE378160030C2E9 /* conejoConPatatasGratinadas.png */; };
+		312182941DE378160030C2E9 /* ensaladillaRusa.png in Resources */ = {isa = PBXBuildFile; fileRef = 3121828F1DE378160030C2E9 /* ensaladillaRusa.png */; };
+		312182951DE378160030C2E9 /* garbanzosConVerdura.png in Resources */ = {isa = PBXBuildFile; fileRef = 312182901DE378160030C2E9 /* garbanzosConVerdura.png */; };
+		312182961DE378160030C2E9 /* recetas.plist in Resources */ = {isa = PBXBuildFile; fileRef = 312182911DE378160030C2E9 /* recetas.plist */; };
+		312182971DE378160030C2E9 /* solomilloWellington.png in Resources */ = {isa = PBXBuildFile; fileRef = 312182921DE378160030C2E9 /* solomilloWellington.png */; };
 		3150DD731DE235000052F060 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3150DD721DE235000052F060 /* AppDelegate.swift */; };
 		3150DD781DE235000052F060 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3150DD761DE235000052F060 /* Main.storyboard */; };
 		3150DD7A1DE235000052F060 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3150DD791DE235000052F060 /* Assets.xcassets */; };
@@ -17,6 +22,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3121828E1DE378160030C2E9 /* conejoConPatatasGratinadas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = conejoConPatatasGratinadas.png; sourceTree = "<group>"; };
+		3121828F1DE378160030C2E9 /* ensaladillaRusa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ensaladillaRusa.png; sourceTree = "<group>"; };
+		312182901DE378160030C2E9 /* garbanzosConVerdura.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = garbanzosConVerdura.png; sourceTree = "<group>"; };
+		312182911DE378160030C2E9 /* recetas.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = recetas.plist; sourceTree = "<group>"; };
+		312182921DE378160030C2E9 /* solomilloWellington.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = solomilloWellington.png; sourceTree = "<group>"; };
 		3150DD6F1DE235000052F060 /* T9E01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = T9E01.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3150DD721DE235000052F060 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3150DD771DE235000052F060 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -39,9 +49,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3121828D1DE378060030C2E9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3121828E1DE378160030C2E9 /* conejoConPatatasGratinadas.png */,
+				3121828F1DE378160030C2E9 /* ensaladillaRusa.png */,
+				312182901DE378160030C2E9 /* garbanzosConVerdura.png */,
+				312182911DE378160030C2E9 /* recetas.plist */,
+				312182921DE378160030C2E9 /* solomilloWellington.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		3150DD661DE235000052F060 = {
 			isa = PBXGroup;
 			children = (
+				3121828D1DE378060030C2E9 /* Resources */,
 				3150DD711DE235000052F060 /* T9E01 */,
 				3150DD701DE235000052F060 /* Products */,
 			);
@@ -128,9 +151,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				312182961DE378160030C2E9 /* recetas.plist in Resources */,
+				312182941DE378160030C2E9 /* ensaladillaRusa.png in Resources */,
 				3150DD7D1DE235000052F060 /* LaunchScreen.storyboard in Resources */,
 				3150DD7A1DE235000052F060 /* Assets.xcassets in Resources */,
 				3150DD781DE235000052F060 /* Main.storyboard in Resources */,
+				312182951DE378160030C2E9 /* garbanzosConVerdura.png in Resources */,
+				312182931DE378160030C2E9 /* conejoConPatatasGratinadas.png in Resources */,
+				312182971DE378160030C2E9 /* solomilloWellington.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,6 +322,7 @@
 				3150DD831DE235000052F060 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

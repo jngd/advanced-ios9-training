@@ -38,6 +38,14 @@ extension RecipeListViewController: UITableViewDataSource {
 		// TODO : Complete cell
 		return cell
 	}
+
+	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+		if segue.identifier == "ViewRecipe",
+			let cell = sender as? RecipeListCell,
+			let employeeViewController = segue.destinationViewController as? RecipeViewController {
+		}
+	}
+
 }
 
 extension RecipeListViewController: UITableViewDelegate {

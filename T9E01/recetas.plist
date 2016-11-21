@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>nombre</key>
+		<string>Solomillo Wellington</string>
+		<key>descripcion</key>
+		<string>Salpimienta la carne y séllala por todos los lados hasta que quede dorada. Deja que se enfríe y úntala con la mostaza. Reserva.
+Pica las chalotas y los ajos y ponlos a pochar en una sartén con un chorrito de aceite. Retira la parte inferior de los champiñones y límpialos. Pícalos finamente, incorpóralos a la sartén, sazona y cocínalos durante 10 minutos. Deja que se enfríen. Añade el paté de foie y mezcla todo bien hasta que quede una pasta homogénea. Deja templar.
+Calienta el horno a 200ºC durante 5 minutos. Extiende la masa de hojaldre sobre una placa de horno. Coloca encima, en la parte central, una capa de la mezcla de champiñones y foie. Coloca encima la carne y cúbrela con otra capa de la mezcla de champiñones y foie. Cierra el hojaldre con cuidado, dejando la unión en la parte inferior. Bate el huevo y con ayuda de un pincel pinta la masa (Puedes decorar la superficie con algunos recortes de hojaldre). Hornéalo a 200ºC durante 20 minutos. Deja que repose durante 10 minutos.
+Pon los espárragos en el vaso de la batidora, agrega la leche y un poco de aceite. Tritura. Sirve la carne con la salsa y decora con una ramita de perejil.</string>
+		<key>imagen</key>
+		<string>solomilloWellington.png</string>
+	</dict>
+	<dict>
+		<key>nombre</key>
+		<string>Conejo con patatas gratinadas</string>
+		<key>descripcion</key>
+		<string>Pela los dientes de ajo, trocea y colócalos en el vaso de la batidora. Añade el vinagre, el vino y un buen chorro de aceite de oliva. Tritura bien. Salpimienta el conejo, colócalo en un bol y riégalo con la mezcla. Deja que macere durante 30 minutos. Colócalo en una bandeja apta para para horno y hornea a 200ºC durante 30 minutos.
+Corta el bacon y fríelo en una sartén con un chorrito de aceite. Reserva.
+Cuece las patatas en una cazuela con agua y una pizca de sal durante 35 minutos. Deja templar, pela y haz lonchas. Coloca unas lonchas de patata en 4 moldes, añade unos trozos de panceta y hierbas provenzales, repite la operación hasta rellenarlos. Riega con la leche evaporada y hornea a 200ºC durante 30 minutos (hornea junto con el conejo). 
+
+Sirve el conejo con las patatas. Decora con perejil picado.</string>
+		<key>imagen</key>
+		<string>conejoConPatatasGratinadas.png</string>
+	</dict>
+	<dict>
+		<key>nombre</key>
+		<string>Ensaladilla rusa</string>
+		<key>descripcion</key>
+		<string>Pon las patatas (limpia y con piel) a cocer a fuego suave en una cazuela con agua fría. Pela las zanahorias y añádelas. Déjalas cocer (patatas y zanahorias) durante 25 minutos. A los 25 minutos de cocción, introduce los huevos, 1 cucharada de sal y deja cocer durante 10 minutos más.
+Escurre el agua, deja que se temple todo. Reserva las zanahorias en un plato y pela las patatas y el huevo.Pica la patata y el huevo en daditos. Corta las zanahorias en 4 cuartos a lo largo. Apila los trozos y córtalas perpendicularmente hasta conseguir trocitos pequeños.
+Corta las aceitunas por la mitad y después finamente.
+Pon la patata, el huevo, la zanahoria y las aceitunas en un cuenco grande, agrega los guisantes y el atún desmigado. Incorpora la mayonesa, mezcla suavemente. Prueba, pon a punto de sal y sirve. Adorna con una rama de perejil.</string>
+		<key>imagen</key>
+		<string>ensaladillaRusa.png</string>
+	</dict>
+	<dict>
+		<key>nombre</key>
+		<string>Garbanzos con verduras</string>
+		<key>descripcion</key>
+		<string>Pon los garbanzos a remojo de víspera.
+En el momento de cocinarlos, pon abundante agua con sal en la olla rápida. Incorpora los huesos de tuétano. Introduce los garbanzos en una red y agrégalos. Añade la cabeza de ajos, el puerro, unos cominos y el tomate concentrado. Tapa y cocina durante 25 minutos a partir de que coja presión.
+Limpia las alcachofas y cuécelas en un cazo con agua y unas ramas de perejil. Escurre, trocea y resérvalas.
+Limpia el cardo y cuécelo en un cazo con agua y unas ramitas de perejil. Añade las zanahorias cortadas en cilindros. Deja que se vayan cocinando y hacia el final agrega las borrajas limpias y troceadas. Cocina todas las verduras y escúrrelas.
+Retira los garbanzos de la olla y agrégales el túetano. Cuela el caldo y añade los fideos. Deja que se cocinen el tiempo que indique en el paquete.
+Saltea las verduras y los garbanzos en una sartén con aceite de oliva y un chorro de vinagre.
+Sirve la sopa en una sopera y los garbanzos con las verduras en una fuente. O todo junto en un plato, como más te guste.</string>
+		<key>imagen</key>
+		<string>garbanzosConVerdura.png</string>
+	</dict>
+</array>
+</plist>

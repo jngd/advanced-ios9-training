@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--RECIPES-->
         <scene sceneID="Jsj-7C-gfh">
             <objects>
                 <tableViewController id="RVV-cq-23D" customClass="RecipeListViewController" customModule="T9E01" customModuleProvider="target" sceneMemberID="viewController">
@@ -15,7 +15,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="172" id="Ho6-fU-6z6" customClass="RecipeListCell" customModule="T9E01" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="320" height="172"/>
+                                <rect key="frame" x="0.0" y="92" width="320" height="172"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ho6-fU-6z6" id="RiL-9k-ExC">
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="171"/>
@@ -44,7 +44,7 @@
                             <outlet property="delegate" destination="RVV-cq-23D" id="FaX-R6-1TC"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="hO5-98-BYg"/>
+                    <navigationItem key="navigationItem" title="RECIPES" id="hO5-98-BYg"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Vn-Va-BzA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -111,6 +111,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="nfD-Bu-vqP"/>
+        <segue reference="YWM-MK-Spx"/>
     </inferredMetricsTieBreakers>
 </document>

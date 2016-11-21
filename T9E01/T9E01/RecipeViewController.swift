@@ -27,4 +27,10 @@ class RecipeViewController: UIViewController {
 	@IBOutlet weak var recipeImage: UIImageView!
 	@IBOutlet weak var recipeName: UILabel!
 	@IBOutlet weak var recipeDescription: UITextView!
+
+	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+		if let destination = segue.destinationViewController as? RecipeListViewController
+			where segue.identifier == "RecipeListEmbedSegue" {
+		}
+	}
 }
