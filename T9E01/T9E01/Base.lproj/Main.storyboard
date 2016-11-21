@@ -35,7 +35,7 @@
                                 <connections>
                                     <outlet property="recipeImage" destination="bkl-O2-HVZ" id="OTg-xm-iJF"/>
                                     <outlet property="recipeName" destination="gIR-t7-7oP" id="0hP-bf-ax2"/>
-                                    <segue destination="iXB-xy-Msu" kind="push" identifier="ViewRecipeDetail" splitViewControllerTargetIndex="1" id="A7F-mb-yPf"/>
+                                    <segue destination="iXB-xy-Msu" kind="push" identifier="ViewRecipeDetail" id="A7F-mb-yPf"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
