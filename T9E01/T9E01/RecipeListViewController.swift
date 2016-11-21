@@ -23,17 +23,26 @@
 import UIKit
 
 class RecipeListViewController: UIViewController {
-	
+
+	var cells: NSArray?
+
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		let path = NSBundle.mainBundle().bundlePath as! NSString
+		let finalPath = path.stringByAppendingPathComponent("recetas.plist")
+		cells = NSArray(contentsOfFile: finalPath)
+		print(cells!.count)
+	}
 }
 
 extension RecipeListViewController: UITableViewDataSource {
 
 	func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return 0
+		return (cells?.count)!
 	}
 
 	func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-		let cell = tableView.dequeueReusableCellWithIdentifier("Employee", forIndexPath: indexPath) as! RecipeListCell
+		let cell = tableView.dequeueReusableCellWithIdentifier("Recipe", forIndexPath: indexPath) as! RecipeListCell
 
 		// TODO : Complete cell
 		return cell
@@ -42,7 +51,7 @@ extension RecipeListViewController: UITableViewDataSource {
 	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
 		if segue.identifier == "ViewRecipe",
 			let cell = sender as? RecipeListCell,
-			let employeeViewController = segue.destinationViewController as? RecipeViewController {
+			let recipeViewController = segue.destinationViewController as? RecipeViewController {
 		}
 	}
 

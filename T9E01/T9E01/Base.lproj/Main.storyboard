@@ -14,11 +14,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="172" id="Ho6-fU-6z6" customClass="RecipeListCell" customModule="T9E01" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="320" height="172"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Recipe" rowHeight="172" id="Ho6-fU-6z6" customClass="RecipeListCell" customModule="T9E01" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="320" height="172"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ho6-fU-6z6" id="RiL-9k-ExC">
-                                    <rect key="frame" x="0.0" y="0.0" width="287" height="171"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="171.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bkl-O2-HVZ">
@@ -35,7 +35,7 @@
                                 <connections>
                                     <outlet property="recipeImage" destination="bkl-O2-HVZ" id="OTg-xm-iJF"/>
                                     <outlet property="recipeName" destination="gIR-t7-7oP" id="0hP-bf-ax2"/>
-                                    <segue destination="iXB-xy-Msu" kind="push" id="A7F-mb-yPf"/>
+                                    <segue destination="iXB-xy-Msu" kind="push" identifier="ViewRecipeDetail" splitViewControllerTargetIndex="1" id="A7F-mb-yPf"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -86,7 +86,7 @@
                         <outlet property="recipeDescription" destination="dzQ-28-1GF" id="sN0-MM-aAS"/>
                         <outlet property="recipeImage" destination="Exa-nd-cyN" id="CMV-HS-EGj"/>
                         <outlet property="recipeName" destination="j22-uL-CIr" id="KrK-Sf-VHu"/>
-                        <segue destination="RVV-cq-23D" kind="modal" id="nfD-Bu-vqP"/>
+                        <segue destination="RVV-cq-23D" kind="custom" id="nfD-Bu-vqP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="waH-88-N9H" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -111,6 +111,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="YWM-MK-Spx"/>
+        <segue reference="nfD-Bu-vqP"/>
     </inferredMetricsTieBreakers>
 </document>
