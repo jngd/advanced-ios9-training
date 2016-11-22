@@ -28,10 +28,11 @@ class RecipeListViewController: UIViewController {
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		let path = NSBundle.mainBundle().bundlePath as! NSString
+		let path = NSBundle.mainBundle().bundlePath as NSString
 		let finalPath = path.stringByAppendingPathComponent("recetas.plist")
 		cells = NSArray(contentsOfFile: finalPath)
-		print(cells!.count)
+		print(cells![0]["descripcion"])
+
 	}
 }
 
@@ -45,15 +46,17 @@ extension RecipeListViewController: UITableViewDataSource {
 		let cell = tableView.dequeueReusableCellWithIdentifier("Recipe", forIndexPath: indexPath) as! RecipeListCell
 
 		// TODO : Complete cell
+		cell.recipeName.text = String(cells![indexPath.row]["nombre"])
+
 		return cell
 	}
 
-	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-		if segue.identifier == "ViewRecipe",
-			let cell = sender as? RecipeListCell,
-			let recipeViewController = segue.destinationViewController as? RecipeViewController {
-		}
-	}
+//	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+////		if segue.identifier == "ViewRecipe",
+////			let cell = sender as? RecipeListCell,
+////			let recipeViewController = segue.destinationViewController as? RecipeViewController {
+////		}
+//	}
 
 }
 

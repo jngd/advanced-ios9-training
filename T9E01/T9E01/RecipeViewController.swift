@@ -21,12 +21,36 @@
 */
 
 import UIKit
+import CoreSpotlight
+import MobileCoreServices
 
 class RecipeViewController: UIViewController {
 	
 	@IBOutlet weak var recipeImage: UIImageView!
 	@IBOutlet weak var recipeName: UILabel!
 	@IBOutlet weak var recipeDescription: UITextView!
+
+	override func viewDidLoad() {
+		super.viewDidLoad()
+
+		// TODO: An example about spotlight indexing
+		let attributeSet = CSSearchableItemAttributeSet(itemContentType: kUTTypeImage as String)
+		attributeSet.title = "Recipe"
+		attributeSet.contentDescription = "Recipe description"
+
+		let item = CSSearchableItem(uniqueIdentifier: "1",
+		                            domainIdentifier: "album-1", attributeSet: attributeSet)
+
+
+		CSSearchableIndex.defaultSearchableIndex().indexSearchableItems([item]) {
+			(error) -> Void in
+			if error != nil {
+				print (error?.localizedDescription)
+			} else {
+				print ("Elemento indexado!!")
+			}
+		}
+	}
 
 	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
 		if let destination = segue.destinationViewController as? RecipeListViewController
