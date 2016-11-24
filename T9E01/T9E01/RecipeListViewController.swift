@@ -31,8 +31,6 @@ class RecipeListViewController: UIViewController {
 		let path = NSBundle.mainBundle().bundlePath as NSString
 		let finalPath = path.stringByAppendingPathComponent("recetas.plist")
 		cells = NSArray(contentsOfFile: finalPath)
-		print(cells![0]["descripcion"])
-
 	}
 }
 
@@ -45,8 +43,12 @@ extension RecipeListViewController: UITableViewDataSource {
 	func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCellWithIdentifier("Recipe", forIndexPath: indexPath) as! RecipeListCell
 
-		// TODO : Complete cell
-		cell.recipeName.text = String(cells![indexPath.row]["nombre"])
+		let recipeName = ((self.cells![indexPath.row] as AnyObject?)!.objectForKey("nombre") as? String)!
+		let recipeImageName = ((self.cells![indexPath.row] as AnyObject?)!.objectForKey("imagen") as? String)!
+		let recipeImage: UIImage = UIImage(named: recipeImageName)!
+
+		cell.recipeName?.text = recipeName
+		cell.recipeImage?.image = recipeImage
 
 		return cell
 	}
