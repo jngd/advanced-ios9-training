@@ -46,20 +46,27 @@ extension RecipeListViewController: UITableViewDataSource {
 		let recipeName = ((self.cells![indexPath.row] as AnyObject?)!.objectForKey("nombre") as? String)!
 		let recipeImageName = ((self.cells![indexPath.row] as AnyObject?)!.objectForKey("imagen") as? String)!
 		let recipeImage: UIImage = UIImage(named: recipeImageName)!
+		let recipeDescription = ((self.cells![indexPath.row] as AnyObject?)!.objectForKey("descripcion") as? String)!
 
 		cell.recipeName?.text = recipeName
 		cell.recipeImage?.image = recipeImage
+		cell.recipeDescription = recipeDescription
 
 		return cell
 	}
 
-//	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-////		if segue.identifier == "ViewRecipe",
-////			let cell = sender as? RecipeListCell,
-////			let recipeViewController = segue.destinationViewController as? RecipeViewController {
-////		}
-//	}
+	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+		if segue.identifier == "ViewRecipeDetail",
+			let cell = sender as! RecipeListCell? {
+			guard let recipeViewController = segue.destinationViewController as? RecipeViewController else {
+				return
+			}
 
+			recipeViewController.recipeImageURL = cell.recipeImage.image?.accessibilityIdentifier
+			recipeViewController.recipeNameText = cell.recipeName.text
+			recipeViewController.recipeDescriptionText = cell.recipeDescription
+		}
+	}
 }
 
 extension RecipeListViewController: UITableViewDelegate {

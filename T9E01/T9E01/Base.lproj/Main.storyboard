@@ -18,7 +18,7 @@
                                 <rect key="frame" x="0.0" y="28" width="320" height="172"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ho6-fU-6z6" id="RiL-9k-ExC">
-                                    <rect key="frame" x="0.0" y="0.0" width="287" height="171.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="172"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bkl-O2-HVZ">
@@ -53,7 +53,7 @@
         <!--Recipe View Controller-->
         <scene sceneID="Emw-q4-rSe">
             <objects>
-                <viewController id="iXB-xy-Msu" customClass="RecipeViewController" customModule="T9E01" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="iXB-xy-Msu" customClass="RecipeViewController" customModule="T9E01" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xfy-U1-DTn"/>
                         <viewControllerLayoutGuide type="bottom" id="2Xa-61-Vzu"/>
@@ -65,8 +65,8 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Exa-nd-cyN">
                                 <rect key="frame" x="40" y="78" width="240" height="128"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j22-uL-CIr">
-                                <rect key="frame" x="139" y="273" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j22-uL-CIr">
+                                <rect key="frame" x="40" y="273" width="240" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -84,14 +84,14 @@
                     <navigationItem key="navigationItem" id="VFx-xk-Shx"/>
                     <connections>
                         <outlet property="recipeDescription" destination="dzQ-28-1GF" id="sN0-MM-aAS"/>
-                        <outlet property="recipeImage" destination="Exa-nd-cyN" id="CMV-HS-EGj"/>
+                        <outlet property="recipeImage" destination="Exa-nd-cyN" id="gRv-QO-LsE"/>
                         <outlet property="recipeName" destination="j22-uL-CIr" id="KrK-Sf-VHu"/>
                         <segue destination="RVV-cq-23D" kind="custom" id="nfD-Bu-vqP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="waH-88-N9H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="485" y="180"/>
+            <point key="canvasLocation" x="475" y="180"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="CDw-w1-2hg">

@@ -26,12 +26,20 @@ import MobileCoreServices
 
 class RecipeViewController: UIViewController {
 	
-	@IBOutlet weak var recipeImage: UIImageView!
-	@IBOutlet weak var recipeName: UILabel!
-	@IBOutlet weak var recipeDescription: UITextView!
+	@IBOutlet weak var recipeImage: UIImageView?
+	@IBOutlet weak var recipeName: UILabel?
+	@IBOutlet weak var recipeDescription: UITextView?
+
+	var recipeImageURL: String!
+	var recipeNameText: String!
+	var recipeDescriptionText: String!
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
+
+		recipeImage?.image = UIImage(named: recipeImageURL)
+		recipeName?.text = recipeNameText
+		recipeDescription?.text = recipeDescriptionText
 
 		// TODO: An example about spotlight indexing
 		let attributeSet = CSSearchableItemAttributeSet(itemContentType: kUTTypeImage as String)
@@ -47,14 +55,14 @@ class RecipeViewController: UIViewController {
 			if error != nil {
 				print (error?.localizedDescription)
 			} else {
-				print ("Elemento indexado!!")
+				print ("Element indexed")
 			}
 		}
 	}
-
-	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-		if let destination = segue.destinationViewController as? RecipeListViewController
-			where segue.identifier == "RecipeListEmbedSegue" {
-		}
-	}
+//
+//	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//		if let destination = segue.destinationViewController as? RecipeListViewController
+//			where segue.identifier == "RecipeListEmbedSegue" {
+//		}
+//	}
 }

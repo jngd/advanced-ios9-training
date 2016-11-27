@@ -26,4 +26,5 @@ class RecipeListCell: UITableViewCell {
 
 	@IBOutlet weak var recipeImage: UIImageView!
 	@IBOutlet weak var recipeName: UILabel!
+	var recipeDescription: String = ""
 }
