@@ -56,18 +56,25 @@ extension RecipeListViewController: UITableViewDataSource {
 	}
 
 	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-		if segue.identifier == "ViewRecipeDetail",
-			let cell = sender as! RecipeListCell? {
-			guard let recipeViewController = segue.destinationViewController as? RecipeViewController else {
-				return
-			}
 
-			recipeViewController.recipeImageURL = cell.recipeImage.image?.accessibilityIdentifier
-			recipeViewController.recipeNameText = cell.recipeName.text
-			recipeViewController.recipeDescriptionText = cell.recipeDescription
+		guard segue.identifier == "ViewRecipeDetail" else {
+			fatalError("Segue identifier not found")
 		}
+
+		guard let cell = sender as! RecipeListCell? else {
+			fatalError("Recipe list cell cannot be cast")
+		}
+
+		guard let recipeViewController = segue.destinationViewController as? RecipeViewController else {
+			return
+		}
+
+		recipeViewController.recipeImageURL = cell.recipeImage.image?.accessibilityIdentifier
+		recipeViewController.recipeNameText = cell.recipeName.text
+		recipeViewController.recipeDescriptionText = cell.recipeDescription
 	}
 }
+
 
 extension RecipeListViewController: UITableViewDelegate {
 

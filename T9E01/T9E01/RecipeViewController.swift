@@ -41,10 +41,9 @@ class RecipeViewController: UIViewController {
 		recipeName?.text = recipeNameText
 		recipeDescription?.text = recipeDescriptionText
 
-		// TODO: An example about spotlight indexing
 		let attributeSet = CSSearchableItemAttributeSet(itemContentType: kUTTypeImage as String)
-		attributeSet.title = "Recipe"
-		attributeSet.contentDescription = "Recipe description"
+		attributeSet.title = recipeNameText
+		attributeSet.contentDescription = recipeDescriptionText
 
 		let item = CSSearchableItem(uniqueIdentifier: "1",
 		                            domainIdentifier: "album-1", attributeSet: attributeSet)
@@ -59,10 +58,4 @@ class RecipeViewController: UIViewController {
 			}
 		}
 	}
-//
-//	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//		if let destination = segue.destinationViewController as? RecipeListViewController
-//			where segue.identifier == "RecipeListEmbedSegue" {
-//		}
-//	}
 }
