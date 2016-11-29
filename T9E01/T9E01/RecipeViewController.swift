@@ -30,6 +30,18 @@ class RecipeViewController: UIViewController {
 	@IBOutlet weak var recipeName: UILabel?
 	@IBOutlet weak var recipeDescription: UITextView?
 
+	@IBAction func removeIndexSearch(sender: AnyObject) {
+
+		CSSearchableIndex.defaultSearchableIndex().deleteSearchableItemsWithIdentifiers([recipeNameText]){
+			(error) -> Void in
+			if error != nil {
+				print (error?.localizedDescription)
+			} else {
+				print ("Element removed")
+			}
+		}
+	}
+
 	var recipeImageURL: String!
 	var recipeNameText: String!
 	var recipeDescriptionText: String!
@@ -44,8 +56,9 @@ class RecipeViewController: UIViewController {
 		let attributeSet = CSSearchableItemAttributeSet(itemContentType: kUTTypeImage as String)
 		attributeSet.title = recipeNameText
 		attributeSet.contentDescription = recipeDescriptionText
+		attributeSet.thumbnailURL = NSURL(fileURLWithPath: recipeImageURL)
 
-		let item = CSSearchableItem(uniqueIdentifier: "1",
+		let item = CSSearchableItem(uniqueIdentifier: recipeNameText,
 		                            domainIdentifier: "album-1", attributeSet: attributeSet)
 
 

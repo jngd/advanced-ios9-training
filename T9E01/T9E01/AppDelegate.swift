@@ -25,5 +25,27 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	var window: UIWindow?
+
+	func application(application: UIApplication, continueUserActivity userActivity: NSUserActivity, restorationHandler: ([AnyObject]?) -> Void) -> Bool {
+
+		print(userActivity.contentAttributeSet?.title) //nil
+		print(userActivity.eligibleForSearch)
+		let mainStoryboardIpad : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+
+		let initialViewController : UINavigationController = mainStoryboardIpad.instantiateViewControllerWithIdentifier("MainViewController") as! UINavigationController
+
+		self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+		self.window?.rootViewController = initialViewController
+		self.window?.makeKeyAndVisible()
+
+//		let viewController = self.window?.rootViewController!.storyboard?.instantiateViewControllerWithIdentifier("RecipeViewController") as! RecipeViewController
+//
+//		viewController.recipeImageURL = celda["imagen"] as? String
+//		viewController.recipeNameText = celda["nombre"] as? String
+//		viewController.recipeDescriptionText = celda["descripcion"] as? String
+//		initialViewController.pushViewController(viewController, animated: true)
+
+		return true
+	}
 }
 
