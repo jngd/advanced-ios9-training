@@ -28,8 +28,9 @@ class ViewController: UIViewController {
 	var appDel: AppDelegate!
 	var context: NSManagedObjectContext!
 	var request: NSFetchRequest!
-
 	var results = [NSManagedObject]()
+
+	@IBOutlet weak var tableView: UITableView!
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -41,7 +42,7 @@ class ViewController: UIViewController {
 		film.setValue("Godzilla", forKey: "title")
 		film.setValue(2014, forKey: "year")
 		film.setValue("Gareth Edwards", forKey: "director")
-		//film.setValue("godzilla.jpg", forKey: "image")
+		film.setValue("godzilla.jpg", forKey: "filmPoster")
 
 		do{
 			try context.save()
@@ -80,10 +81,40 @@ extension ViewController: UITableViewDataSource {
 		cell.title.text = film.valueForKey("title") as? String
 		cell.director.text = film.valueForKey("director") as? String
 		cell.year.text = String(film.valueForKey("year") as! NSNumber)
-		// TODO : Image
+
+//
+//NSBundle.pathForImag		let readPath = NSBundle.pathForResource(film.valueForKey("filmPoster") as? String, ofType: ".jpg", inDirectory: "Resources")
+//		print("Read path \(readPath) ")
+
+		print((NSBundle.pathForResource(film.valueForKey("filmPoster") as? String, ofType: ".jpg", inDirectory: "Resources")))
+		
+		let imageFromPath = UIImage(contentsOfFile: (film.valueForKey("filmPoster") as? String)!)
+		cell.imageView?.image = imageFromPath
 
 		return cell
 	}
+
+	func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+		return true
+	}
+
+	func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+		print("DELETING")
+		guard editingStyle == .Delete else {
+			return
+		}
+
+		context.deleteObject(results[indexPath.item])
+
+		do {
+			try self.context.save()
+			self.results.removeAtIndex(indexPath.row)
+			self.tableView.reloadData()
+		}catch{
+			print("error deleting element")
+		}
+	}
+
 }
 
 extension ViewController: UITableViewDelegate {

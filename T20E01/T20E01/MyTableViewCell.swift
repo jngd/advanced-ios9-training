@@ -25,5 +25,6 @@ import UIKit
 class MyTableViewCell: UITableViewCell {
 	@IBOutlet weak var title: UILabel! = UILabel()
 	@IBOutlet weak var director: UILabel! = UILabel()
-	@IBOutlet weak var year: UILabel! = UILabel()
+	@IBOutlet weak var year: UILabel! = UILabel()	
+	@IBOutlet weak var filmPoster: UIImageView!
 }
