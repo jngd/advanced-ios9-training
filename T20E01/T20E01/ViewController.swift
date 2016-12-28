@@ -39,6 +39,7 @@ class ViewController: UIViewController {
 
 		let film = NSEntityDescription.insertNewObjectForEntityForName("Film", inManagedObjectContext: context) as NSManagedObject
 
+		// TODO : Insert films here
 		film.setValue("Godzilla", forKey: "title")
 		film.setValue(2014, forKey: "year")
 		film.setValue("Gareth Edwards", forKey: "director")
@@ -81,12 +82,6 @@ extension ViewController: UITableViewDataSource {
 		cell.title.text = film.valueForKey("title") as? String
 		cell.director.text = film.valueForKey("director") as? String
 		cell.year.text = String(film.valueForKey("year") as! NSNumber)
-
-//
-//NSBundle.pathForImag		let readPath = NSBundle.pathForResource(film.valueForKey("filmPoster") as? String, ofType: ".jpg", inDirectory: "Resources")
-//		print("Read path \(readPath) ")
-
-		print((NSBundle.pathForResource(film.valueForKey("filmPoster") as? String, ofType: ".jpg", inDirectory: "Resources")))
 		
 		let imageFromPath = UIImage(contentsOfFile: (film.valueForKey("filmPoster") as? String)!)
 		cell.imageView?.image = imageFromPath
@@ -99,7 +94,7 @@ extension ViewController: UITableViewDataSource {
 	}
 
 	func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-		print("DELETING")
+
 		guard editingStyle == .Delete else {
 			return
 		}
