@@ -66,13 +66,31 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RYY-oz-hI0">
-                                <rect key="frame" x="40" y="20" width="240" height="384"/>
+                                <rect key="frame" x="40" y="20" width="240" height="343"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g0x-Nb-qhJ">
-                                <rect key="frame" x="142" y="471" width="36" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Za-lV-Zoq">
+                                <rect key="frame" x="118" y="371" width="85" height="30"/>
+                                <state key="normal" title="Pick a photo">
+                                    <color key="titleColor" red="0.97120141979999997" green="0.11216024966951034" blue="0.0044404855527447129" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="pickPhoto:" destination="Z4A-ZM-isu" eventType="touchUpInside" id="VhB-q5-Jde"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KFp-8q-dFn">
+                                <rect key="frame" x="142" y="481" width="36" height="30"/>
                                 <state key="normal" title="Send"/>
                                 <connections>
-                                    <action selector="sendAction:" destination="Z4A-ZM-isu" eventType="touchUpInside" id="cYv-A1-imm"/>
+                                    <action selector="sendAction:" destination="Z4A-ZM-isu" eventType="touchUpInside" id="zCU-CT-jCg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mun-t9-0qZ">
+                                <rect key="frame" x="116" y="409" width="89" height="30"/>
+                                <state key="normal" title="Take a photo">
+                                    <color key="titleColor" red="0.97120141979999997" green="0.11216024970000001" blue="0.0044404855530000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="takePhoto:" destination="Z4A-ZM-isu" eventType="touchUpInside" id="l7o-gl-P2d"/>
                                 </connections>
                             </button>
                         </subviews>

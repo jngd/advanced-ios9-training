@@ -22,9 +22,37 @@
 
 import UIKit
 
-class ImageViewController: UIViewController {
+class ImageViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
 	@IBOutlet weak var imageView: UIImageView!
+
+	@IBAction func takePhoto(sender: AnyObject) {
+
+		guard UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera) else {
+			print("Cannot access to camera")
+			return
+		}
+
+		let imagePicker = UIImagePickerController()
+		imagePicker.delegate = self
+		imagePicker.sourceType = UIImagePickerControllerSourceType.Camera;
+		imagePicker.allowsEditing = false
+		self.presentViewController(imagePicker, animated: true, completion: nil)
+	}
+
+	@IBAction func pickPhoto(sender: AnyObject) {
+
+		guard UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.PhotoLibrary) else {
+			print("Cannot access to photo library")
+			return
+		}
+
+		let imagePicker = UIImagePickerController()
+		imagePicker.delegate = self
+		imagePicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary;
+		imagePicker.allowsEditing = true
+		self.presentViewController(imagePicker, animated: true, completion: nil)
+	}
 
 	@IBAction func sendAction(sender: AnyObject) {
 		let controller = UIActivityViewController(activityItems: [self.imageView.image!],applicationActivities: nil)
@@ -34,5 +62,10 @@ class ImageViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		imageView.image = UIImage(named: "elhobbit.jpg")
+	}
+
+	func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
+		imageView.image = image
+		self.dismissViewControllerAnimated(true, completion: nil);
 	}
 }
