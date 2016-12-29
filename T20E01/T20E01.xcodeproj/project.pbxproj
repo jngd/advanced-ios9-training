@@ -66,7 +66,10 @@
 		31D24E311DF2DC5100DB3CEB /* T20E01 */ = {
 			isa = PBXGroup;
 			children = (
-				31D24E4C1DF2E85B00DB3CEB /* Resources */,
+				31D24E4D1DF2E91300DB3CEB /* alien.jpg */,
+				31D24E4E1DF2E91300DB3CEB /* elhobbit.jpg */,
+				31D24E4F1DF2E91300DB3CEB /* godzilla.jpg */,
+				31D24E501DF2E91300DB3CEB /* jurassic.jpg */,
 				31D24E491DF2E61200DB3CEB /* MyTableViewCell.swift */,
 				31D24E321DF2DC5100DB3CEB /* AppDelegate.swift */,
 				31D24E341DF2DC5100DB3CEB /* ViewController.swift */,
@@ -77,17 +80,6 @@
 				31D24E391DF2DC5100DB3CEB /* T20E01.xcdatamodeld */,
 			);
 			path = T20E01;
-			sourceTree = "<group>";
-		};
-		31D24E4C1DF2E85B00DB3CEB /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				31D24E4D1DF2E91300DB3CEB /* alien.jpg */,
-				31D24E4E1DF2E91300DB3CEB /* elhobbit.jpg */,
-				31D24E4F1DF2E91300DB3CEB /* godzilla.jpg */,
-				31D24E501DF2E91300DB3CEB /* jurassic.jpg */,
-			);
-			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -82,9 +82,7 @@ extension ViewController: UITableViewDataSource {
 		cell.title.text = film.valueForKey("title") as? String
 		cell.director.text = film.valueForKey("director") as? String
 		cell.year.text = String(film.valueForKey("year") as! NSNumber)
-		
-		let imageFromPath = UIImage(contentsOfFile: (film.valueForKey("filmPoster") as? String)!)
-		cell.imageView?.image = imageFromPath
+		cell.filmPoster?.image = UIImage(named: String(film.valueForKey("filmPoster")!))
 
 		return cell
 	}
@@ -106,7 +104,7 @@ extension ViewController: UITableViewDataSource {
 			self.results.removeAtIndex(indexPath.row)
 			self.tableView.reloadData()
 		}catch{
-			print("error deleting element")
+			print("Error deleting element")
 		}
 	}
 
